@@ -59,12 +59,13 @@ h5 {
 }
 
 
-xmp {
+pre {
     border: solid 1px #1b251f;
     overflow: auto;
     background: #455f4e;
     color: #f0f8ff;
     padding: 10px;
+    z-index: -1;
 }
 
 header {
@@ -157,6 +158,10 @@ footer a {
 @media (max-width: 768px) {
     .root {
         width: 100%;
+    }
+
+    header {
+        min-height: 100vh;
     }
 }
 @media (min-width: 768px) {
