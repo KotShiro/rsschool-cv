@@ -1,0 +1,311 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    /* Typography */
+    font-family: Arial, Helvetica, sans-serif;
+
+    /* Visual */
+    background: linear-gradient(45deg, #ebb48f, #86a6b4);
+    background-attachment: fixed;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li > ul {
+    padding-left: 20px;
+}
+
+body,
+header,
+header ul,
+nav ul {
+    /* Positioning */
+    align-items: center;
+    justify-content: center;
+
+    /* Box-model */
+    display: flex;
+}
+
+main > section:nth-child(-n+3),
+main > section:nth-child(4),
+main > section:nth-child(5),
+main > section:nth-child(6),
+header,
+footer
+{
+    /* Positioning */
+    flex-direction: column;
+    justify-content: center;
+
+    /* Box-model */
+    display: flex;
+}
+
+h3 {
+    /* Box-model */
+    margin: 35px 0;
+
+
+    /* Typography */
+    font-size: 1.7rem;
+    text-align: center;
+}
+
+h5 {
+    /* Box-model */
+    margin: 10px 0;
+
+    /* Typography */
+    font-size: 1.5rem;
+}
+
+
+pre {
+    /* Positioning */
+    z-index: -1;
+
+    /* Box-model */
+    padding: 10px;
+    overflow: auto;
+
+    /* Typography */
+    color: #f0f8ff;
+
+
+    /* Visual */
+    border: solid 1px #1b251f;
+    background: #455f4e;
+
+}
+
+header {
+    padding-top: 35px;
+}
+
+nav > ul {
+    display: none;
+}
+
+nav li a {
+    width: 100%;
+}
+
+header figure {
+    /* Positioning */
+    flex-direction: column;
+    align-items: center;
+
+    /* Box-model */
+    display: flex;
+}
+
+header figure img {
+    /* Box-model */
+    padding: 35px 0;
+
+    /* Visual */
+    border-radius: 50%;
+}
+
+.myself li {
+    margin: 0 10px;
+}
+.myself > * {
+    padding: 5px 0;
+}
+
+.myself h5 {
+    text-align: center;
+}
+
+.s-3 > * {
+    margin: 5px 0;
+}
+
+.s-3 li {
+    margin: 5px 0;
+}
+
+main section a,
+footer a {
+    /* Typography */
+    color: #000000;
+    text-decoration: none;
+    text-shadow: #282c29ce 1px 1px 1px;
+
+    /* Misc */
+    cursor: pointer;
+}
+main section a:hover,
+footer a:hover {
+    text-shadow: #0d3649 1px 1px 2px;
+}
+
+main section:nth-child(odd) {
+    background: #28742444;
+}
+
+main section {
+    padding: 5% 10%;
+}
+
+nav a:hover {
+    /* Typography */
+    color: #EECFBA;
+
+    /* Visual */
+    background-color: #0d3649;
+}
+
+nav a:active {
+    background-color: #0d36499c;
+}
+
+.myself a img:hover {
+    border-radius: 30%;
+    box-shadow: #0d3649 1px 2px 5px;
+    background-color: #0d3649;
+}
+
+footer {
+    /* Positioning */
+    justify-content: center;
+    align-content: center;
+
+    /* Box-model */
+    display: flex;
+}
+
+footer a {
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .root {
+        width: 100%;
+    }
+
+    header {
+        min-height: 100vh;
+    }
+}
+@media (min-width: 768px) {
+    body {
+        width: 100%;
+    }
+    main > section:nth-child(-n+3) {
+        min-height: 100vh;
+    }
+    main > section:nth-child(4),
+    main > section:nth-child(5),
+    main > section:nth-child(6)
+    {
+        min-height: 30vh;
+    }
+
+    footer {
+        min-height: 10vh;
+    }
+
+    header{
+        min-height: 100vh;
+    }
+    nav{
+        min-height: 25vh;
+    }
+    p,
+    ul {
+        font-size: 1.5rem;
+    }
+}
+
+/* Menu nav */
+nav li {
+    background-color: #4a6c48;
+}
+nav a {
+    /* Positioning */
+    float: left;
+
+    /* Box-model */
+    display: block;
+    padding: 14px 0;
+
+    /* Typography */
+    color: #f2f2f2;
+    text-align: center;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+@media (max-width: 768px) {
+    .icon {
+        /* Positioning */
+        position: fixed;
+        top: 20px;
+        right: 20px;
+
+        /* Box-model */
+        padding: 10px 13px;
+    }
+    nav {
+        /* Positioning */
+        position: fixed;
+        top: 0;
+        left: 0;
+
+        /* Box-model */
+        width: 100%;
+    }
+    nav > ul {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    nav > a:last-child {       
+        /* Typography */
+        color: #000000;
+        font-size: 15px;
+        
+        /* Visual */
+        border-radius: 50%;
+        box-shadow: #000000 1px 1px 6px
+    }
+    .responsive {
+        display: grid;
+    }
+  }
+
+@media (min-width: 768px) {
+    .icon {
+        display: none;
+    }
+    nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+    nav > ul {
+        /* Positioning */
+        position: fixed;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+
+        /* Box-model */
+        display: grid;
+        width: 100%;
+
+   }
+
+   header {
+       min-height: 100vh;
+   }
+}
